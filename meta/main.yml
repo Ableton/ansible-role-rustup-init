@@ -1,0 +1,24 @@
+---
+galaxy_info:
+  author: ableton
+  company: Ableton AG
+  description: Install rustup-init on a host
+  license: MIT
+  min_ansible_version: 2.10
+  role_name: rustup_init
+
+  platforms:
+    - name: Debian
+      versions:
+        - all
+    - name: Ubuntu
+      versions:
+        - all
+    - name: Mac OS X
+      versions:
+        - all
+    - name: Windows
+      versions:
+        - 10
+
+dependencies: []
