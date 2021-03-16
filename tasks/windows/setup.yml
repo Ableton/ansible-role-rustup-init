@@ -1,0 +1,4 @@
+---
+- name: Initialize rustup_init_arch fact
+  set_fact:
+    rustup_init_arch: "x86_64-pc-windows-msvc"
