@@ -1,3 +1,5 @@
+"""Molecule tests for the default scenario."""
+
 import os
 
 import testinfra.utils.ansible_runner
@@ -9,6 +11,7 @@ testinfra_hosts = testinfra.utils.ansible_runner.AnsibleRunner(
 
 
 def test_rustup_init_installed(host):
+    """Ensure that rustup-init was installed."""
     rustup_init = host.file("/home/molecule/rustup-init")
 
     assert rustup_init.is_file
