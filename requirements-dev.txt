@@ -6,6 +6,8 @@
 #
 ansible==4.6.0
     # via -r requirements-dev.in
+ansible-compat==0.5.0
+    # via molecule-docker
 ansible-core==2.11.5
     # via ansible
 ansible-lint==5.1.2
@@ -96,7 +98,7 @@ molecule==3.4.0
     # via
     #   -r requirements-dev.in
     #   molecule-docker
-molecule-docker==0.2.4
+molecule-docker==1.0.2
     # via -r requirements-dev.in
 more-itertools==8.4.0
     # via pytest
@@ -144,6 +146,7 @@ python-slugify==4.0.1
     # via cookiecutter
 pyyaml==5.4
     # via
+    #   ansible-compat
     #   ansible-core
     #   ansible-lint
     #   molecule
@@ -153,6 +156,7 @@ requests==2.25.1
     # via
     #   cookiecutter
     #   docker
+    #   molecule-docker
 resolvelib==0.5.4
     # via ansible-core
 rich==9.11.1
