@@ -1,6 +1,6 @@
 ---
 - name: Download rustup-init tool
-  get_url:
+  ansible.builtin.get_url:
     url: "https://static.rust-lang.org/rustup/dist/{{ rustup_init_arch }}/rustup-init"
     dest: "~{{ ansible_user }}"
     force: true
