@@ -1,12 +1,12 @@
 ---
 - name: Download rustup-init tool
-  win_get_url:
+  ansible.windows.win_get_url:
     url: "https://static.rust-lang.org/rustup/dist/{{ rustup_init_arch }}/rustup-init.exe"
     dest: "C:\\Users\\{{ ansible_user }}\\"
     force: true
 
 - name: Pre-emptively add cargo bin dir to PATH
-  win_path:
+  ansible.windows.win_path:
     elements:
       - "C:\\Users\\{{ ansible_user }}\\.cargo\\bin"
   register: win_path_result
