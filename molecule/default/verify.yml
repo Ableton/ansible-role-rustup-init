@@ -1,0 +1,15 @@
+---
+- name: Verify
+  hosts: all
+  tasks:
+    - name: Stat rustup-init file
+      ansible.builtin.stat:
+        path: "/home/molecule/rustup-init"
+      register: rustup_init
+
+    - name: Assert that rustup-init was installed correctly
+      ansible.builtin.assert:
+        that:
+          - rustup_init.stat.exists
+          - rustup_init.stat.isreg
+          - rustup_init.stat.mode == "0755"
