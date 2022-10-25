@@ -1,4 +1,6 @@
 ---
-- ansible.builtin.include_tasks: "{{ ansible_os_family | lower }}/setup.yml"
+- name: Include OS-specific setup tasks
+  ansible.builtin.include_tasks: "{{ ansible_os_family | lower }}/setup.yml"
 
-- ansible.builtin.include_tasks: "{{ ansible_os_family | lower }}/install.yml"
+- name: Include OS-specific tasks to install rustup
+  ansible.builtin.include_tasks: "{{ ansible_os_family | lower }}/install.yml"

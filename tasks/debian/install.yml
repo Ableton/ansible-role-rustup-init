@@ -1,2 +1,3 @@
 ---
-- ansible.builtin.include_tasks: "unix/install.yml"
+- name: Include Unix-specific installation tasks
+  ansible.builtin.include_tasks: "unix/install.yml"
