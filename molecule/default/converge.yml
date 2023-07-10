@@ -4,4 +4,4 @@
   vars:
     ansible_user: molecule
   roles:
-    - ansible-role-rustup-init
+    - ableton.rustup_init
